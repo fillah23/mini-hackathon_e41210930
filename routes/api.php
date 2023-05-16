@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\apiBudayaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/budayas', [apiBudayaController::class, 'index']);
+Route::post('/budayas', [apiBudayaController::class, 'store']);
+Route::put('/budayas/{id}', [apiBudayaController::class, 'update']);
+Route::delete('/budayas/{id}', [apiBudayaController::class, 'destroy']);

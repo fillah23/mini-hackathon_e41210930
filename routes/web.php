@@ -24,9 +24,9 @@ use App\Models\Pendidikan;
 // });
 
 
-Route::resource('/',HomeController::class);
+// Route::resource('/',HomeController::class);
 
-Route::resource('dashboard',DashboardController::class);
+Route::resource('/',DashboardController::class);
 // untuk menuju ke halaman pengelaman kerja
 Route::resource('pengalaman_kerja',pengalaman_kerja::class);
 // untuk menuju ke halaman pendidikan
